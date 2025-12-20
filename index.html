@@ -111,27 +111,17 @@
     color: #007BFF;
 }
 
-/* 小屏幕自适应，优化导航栏撑满宽度 */
+/* 小屏幕自适应 */
 @media (max-width: 768px) {
     .navbar-custom {
         flex-direction: column;
-        align-items: stretch; /* 改成 stretch，撑满宽度 */
-        padding: 10px 20px;   /* 缩小内边距，防止换行 */
+        align-items: flex-start;
     }
     .navbar-custom .nav-links {
         flex-direction: column;
-        width: 100%;          /* 保证菜单宽度撑满 */
+        width: 100%;
         gap: 10px;
         margin-top: 10px;
-    }
-    .navbar-custom .nav-links li a {
-        display: block;       /* 链接撑满父元素 */
-        width: 100%;
-    }
-    .navbar-custom .brand {
-        width: 100%;          /* LOGO/名字也撑满 */
-        text-align: left;     /* 可改为 center，看你喜好 */
-        margin-bottom: 5px;
     }
 }
 
