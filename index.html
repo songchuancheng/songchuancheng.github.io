@@ -46,22 +46,92 @@
     
 <body>
 <!-- 导航栏开始 -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Chuancheng Song</a>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">中文</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">English</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+<style>
+/* 导航栏整体 */
+.navbar-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(255, 255, 255, 0.95); /* 半透明背景 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 轻微阴影 */
+    font-family: 'Roboto', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* LOGO 或名字 */
+.navbar-custom .brand {
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #333;
+    text-decoration: none;
+}
+
+/* 菜单 */
+.navbar-custom .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-custom .nav-links li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 5px 0;
+    position: relative;
+}
+
+/* 悬停下划线动画 */
+.navbar-custom .nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -2px;
+    background-color: #007BFF; /* 高亮颜色，可修改 */
+    transition: width 0.3s;
+}
+
+.navbar-custom .nav-links li a:hover::after {
+    width: 100%;
+}
+
+/* 鼠标悬停字体颜色变化 */
+.navbar-custom .nav-links li a:hover {
+    color: #007BFF;
+}
+
+/* 小屏幕自适应 */
+@media (max-width: 768px) {
+    .navbar-custom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-custom .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
+    }
+}
+</style>
+
+<nav class="navbar-custom">
+    <a href="#" class="brand">Xixun Lin</a>
+    <ul class="nav-links">
+        <li><a href="#">中文</a></li>
+        <li><a href="#">English</a></li>
+    </ul>
 </nav>
 <!-- 导航栏结束 -->
+
     
 <div class="container">
     <div class="row">
